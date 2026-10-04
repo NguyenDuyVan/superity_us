@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+
+  /* Brand palette (orange accent + near-black ink, from the logo) */
+  --color-brand: #ff5a1f;
+  --color-brand-dark: #e64a14;
+  --color-brand-light: #fff1ec;
+  --color-ink: #2b2b2b;
+  --color-ink-soft: #5b5b5b;
+  --color-muted: #f7f7f8;
+}
+
+body {
+  font-family: var(--font-sans);
+}

@@ -1,0 +1,36 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: infinityfulfillment-web:latest
+    container_name: infinityfulfillment-web
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    networks:
+      - deploy_web
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=deploy_web"
+
+      # HTTPS router
+      - "traefik.http.routers.infinityfulfillment.rule=Host(`infinityfulfill.com`) || Host(`www.infinityfulfill.com`)"
+      - "traefik.http.routers.infinityfulfillment.entrypoints=websecure"
+      - "traefik.http.routers.infinityfulfillment.tls=true"
+      - "traefik.http.routers.infinityfulfillment.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.infinityfulfillment.service=infinityfulfillment"
+
+      # HTTP -> HTTPS redirect
+      - "traefik.http.routers.infinityfulfillment-http.rule=Host(`infinityfulfill.com`) || Host(`www.infinityfulfill.com`)"
+      - "traefik.http.routers.infinityfulfillment-http.entrypoints=web"
+      - "traefik.http.routers.infinityfulfillment-http.middlewares=infinityfulfillment-redirect"
+      - "traefik.http.middlewares.infinityfulfillment-redirect.redirectscheme.scheme=https"
+
+      # Upstream service port
+      - "traefik.http.services.infinityfulfillment.loadbalancer.server.port=3000"
+
+networks:
+  deploy_web:
+    external: true
