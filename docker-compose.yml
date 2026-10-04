@@ -3,8 +3,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: infinityfulfillment-web:latest
-    container_name: infinityfulfillment-web
+    image: superity-web:latest
+    container_name: superity-web
     restart: unless-stopped
     environment:
       - NODE_ENV=production
@@ -16,20 +16,20 @@ services:
       - "traefik.docker.network=deploy_web"
 
       # HTTPS router
-      - "traefik.http.routers.infinityfulfillment.rule=Host(`infinityfulfill.com`) || Host(`www.infinityfulfill.com`)"
-      - "traefik.http.routers.infinityfulfillment.entrypoints=websecure"
-      - "traefik.http.routers.infinityfulfillment.tls=true"
-      - "traefik.http.routers.infinityfulfillment.tls.certresolver=letsencrypt"
-      - "traefik.http.routers.infinityfulfillment.service=infinityfulfillment"
+      - "traefik.http.routers.superity.rule=Host(`superity.us`) || Host(`www.superity.us`)"
+      - "traefik.http.routers.superity.entrypoints=websecure"
+      - "traefik.http.routers.superity.tls=true"
+      - "traefik.http.routers.superity.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.superity.service=superity"
 
       # HTTP -> HTTPS redirect
-      - "traefik.http.routers.infinityfulfillment-http.rule=Host(`infinityfulfill.com`) || Host(`www.infinityfulfill.com`)"
-      - "traefik.http.routers.infinityfulfillment-http.entrypoints=web"
-      - "traefik.http.routers.infinityfulfillment-http.middlewares=infinityfulfillment-redirect"
-      - "traefik.http.middlewares.infinityfulfillment-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.superity-http.rule=Host(`superity.us`) || Host(`www.superity.us`)"
+      - "traefik.http.routers.superity-http.entrypoints=web"
+      - "traefik.http.routers.superity-http.middlewares=superity-redirect"
+      - "traefik.http.middlewares.superity-redirect.redirectscheme.scheme=https"
 
       # Upstream service port
-      - "traefik.http.services.infinityfulfillment.loadbalancer.server.port=3000"
+      - "traefik.http.services.superity.loadbalancer.server.port=3000"
 
 networks:
   deploy_web:

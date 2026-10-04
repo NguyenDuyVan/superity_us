@@ -9,9 +9,9 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Infinity Fulfillment — Your All-in-One China Fulfillment Center",
+  title: "Superity Fulfillment — Your All-in-One China Fulfillment Center",
   description:
-    "Simplify your e-commerce with Infinity's hassle-free China fulfillment solution. No setup, monthly or storage fees — same-day fulfillment, quality inspection and 24/7 support.",
+    "Simplify your e-commerce with Superity's hassle-free China fulfillment solution. No setup, monthly or storage fees — same-day fulfillment, quality inspection and 24/7 support.",
 };
 
 export default function RootLayout({

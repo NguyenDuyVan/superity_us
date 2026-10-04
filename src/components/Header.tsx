@@ -1,10 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
-import { MenuIcon, CloseIcon, MailIcon } from "./icons";
+import { MenuIcon, CloseIcon, MailIcon, LogoMark } from "./icons";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -23,8 +22,12 @@ export default function Header() {
       </div>
 
       <nav className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between gap-4">
-        <Link href="#home" className="flex items-center" aria-label={site.brand}>
-          <Image src="/images/logo.png" alt={site.brand} width={180} height={64} priority className="h-9 w-auto" />
+        <Link href="#home" className="flex items-center gap-2.5" aria-label={site.brand}>
+          <LogoMark className="h-10 w-10 shrink-0" />
+          <span className="flex flex-col text-[17px] font-extrabold leading-[1.05] tracking-wide text-ink">
+            <span>SUPERITY</span>
+            <span>FULFILLMENT</span>
+          </span>
         </Link>
 
         <ul className="hidden lg:flex items-center gap-8 text-[15px] font-medium text-ink">

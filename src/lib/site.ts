@@ -1,14 +1,15 @@
 export const site = {
-  brand: "Infinity Fulfillment",
-  company: "Infinity Ads and Trade Agency Limited",
-  email: "hello@infinityfulfill.com",
+  brand: "Superity Fulfillment",
+  company: "SUPERITY PTE. LTD.",
+  domain: "superity.us",
+  email: "contact.superity@gmail.com",
   address: {
     lines: [
-      "RM 1618B, 16/F, PIONEER CENTRE,",
-      "750 NATHAN ROAD, MONGKOK,",
-      "KOWLOON, HONG KONG",
+      "60 PAYA LEBAR ROAD, #07-54,",
+      "PAYA LEBAR SQUARE,",
+      "SINGAPORE 409051",
     ],
-    full: "RM 1618B, 16/F, PIONEER CENTRE, 750 NATHAN ROAD, MONGKOK, KOWLOON, HONG KONG",
+    full: "60 PAYA LEBAR ROAD, #07-54, PAYA LEBAR SQUARE, SINGAPORE 409051",
   },
   nav: [
     { label: "Home", href: "#home" },

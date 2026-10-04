@@ -7,7 +7,7 @@ const reviews = [
     company: "The Pet Paradise",
     image: "/images/testimonial-01.jpg",
     quote:
-      "Working with Infinity streamlined our operations and gave our sales a real boost. Orders go out fast and our customers notice.",
+      "Working with Superity streamlined our operations and gave our sales a real boost. Orders go out fast and our customers notice.",
   },
   {
     name: "Sarah Johnson",

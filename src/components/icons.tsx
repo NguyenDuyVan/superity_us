@@ -158,3 +158,14 @@ export const ArrowRightIcon = (p: IconProps) => (
     <path d="M5 12h14M12 5l7 7-7 7" />
   </svg>
 );
+
+export const LogoMark = (p: IconProps) => (
+  <svg width={40} height={40} viewBox="0 0 40 40" fill="none" aria-hidden="true" {...p}>
+    <circle cx="14" cy="14" r="12" className="fill-brand" />
+    <g stroke="#2b2b2b" strokeWidth={2.2} strokeLinejoin="round" strokeLinecap="round">
+      <path d="M8 15 21 9l13 6v15l-13 6-13-6z" fill="#fff" fillOpacity={0.6} />
+      <path d="M8 15l13 6 13-6M21 21v15" />
+      <path d="M14.5 12l13 6v5" />
+    </g>
+  </svg>
+);

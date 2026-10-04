@@ -20,7 +20,7 @@ export default function WhatWeDo() {
           <div className="relative aspect-4/3 overflow-hidden rounded-3xl shadow-xl ring-1 ring-black/5">
             <Image
               src="/images/packing.jpg"
-              alt="Inside the Infinity fulfillment warehouse"
+              alt="Inside the Superity fulfillment warehouse"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"

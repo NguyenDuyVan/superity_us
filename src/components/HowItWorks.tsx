@@ -36,7 +36,7 @@ export default function HowItWorks() {
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-bold uppercase tracking-wider text-brand">Fast &amp; friendly</p>
           <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight">
-            E-commerce fulfillment with Infinity is easy
+            E-commerce fulfillment with Superity is easy
           </h2>
           <p className="mt-4 text-white/70">Three simple steps to seamless e-commerce success.</p>
         </div>

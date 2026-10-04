@@ -20,10 +20,10 @@ export default function Footer() {
         {/* Brand + intro */}
         <div className="lg:col-span-1">
           <div className="text-2xl font-extrabold text-white">
-            INFINITY<span className="text-brand"> FULFILLMENT</span>
+            SUPERITY<span className="text-brand"> FULFILLMENT</span>
           </div>
           <p className="mt-4 text-sm leading-relaxed">
-            Simplify your e-commerce with Infinity&apos;s hassle-free China fulfillment solution for bigger success.
+            Simplify your e-commerce with Superity&apos;s hassle-free China fulfillment solution for bigger success.
           </p>
           <div className="mt-5 space-y-2 text-sm">
             <a href={`mailto:${site.email}`} className="flex items-center gap-2 hover:text-brand">

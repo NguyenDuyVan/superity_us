@@ -10,7 +10,7 @@ export default function Hero() {
       {/* Background warehouse photo + readable light overlay */}
       <Image
         src="/images/hero.jpg"
-        alt="Infinity Fulfillment warehouse"
+        alt="Superity Fulfillment warehouse"
         fill
         priority
         sizes="100vw"
